@@ -28,7 +28,10 @@
     </div>
     <div class="container-sm card border border-3 text-center bg-danger" style="margin-top:300px;">
         <div class="row p-3">
-            <div class="col text-warning">
+            <div id="" class="col text-warning">
+                <h3 id="msg" class="text-light"></h3>
+            </div>
+            <div id="timer" class="col text-warning">
                 <h3 class="text-light">One of the special day of my life is coming soon...!</h3>
                 <span id="Days"></span><span><strong>Days</strong></span>
                 <span id="Hrs"></span><span><strong>Hrs</strong></span>
@@ -61,12 +64,16 @@
                 var bm = bday.getMonth();
                 //var by = bday.getFullYear();
 
+                console.log(cd);
+                console.log(bd);
+                console.log(cm);
+                console.log(bm);
                 if (bm == cm) {
                     if (cd < bd) {
                         countDown(dTime);
                     }
                     else if (cd == bd) {
-                        document.getElementById("timer").style = "display:none;"
+                        document.getElementById("timer").style.display = "none"
                         document.getElementById("msg").innerHTML = "Today's  is my BirthDay..!"
                     }
                     else {
